@@ -1,40 +1,12 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
+import FirstScreen from "./screens/First";
+import SecondScreen from "./screens/Second";
+import ThirdScreen from "./screens/Third";
+
 const Tab = createBottomTabNavigator();
-
-const FirstScreen = () => {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontWeight: "700", fontSize: 20 }}>1. Screen</Text>
-    </View>
-  );
-};
-
-const SecondScreen = () => {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontWeight: "700", fontSize: 20 }}>2. Screen</Text>
-    </View>
-  );
-};
-
-const ThirdScreen = () => {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontWeight: "700", fontSize: 20 }}>3. Screen</Text>
-    </View>
-  );
-};
-
-const FourthScreen = () => {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontWeight: "700", fontSize: 20 }}>4. Screen</Text>
-    </View>
-  );
-};
 
 export default function App() {
   return (
@@ -43,7 +15,6 @@ export default function App() {
         <Tab.Screen name="FirstScreen" component={FirstScreen} />
         <Tab.Screen name="SecondScreen" component={SecondScreen} />
         <Tab.Screen name="ThirdScreen" component={ThirdScreen} />
-        <Tab.Screen name="FourthScreen" component={FourthScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
