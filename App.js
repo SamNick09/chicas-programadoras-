@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
@@ -20,15 +20,26 @@ export default function App() {
   //   return true;
   // }
 
+  // Aqui pueden ver las cosas del header
+  // https://reactnavigation.org/docs/headers/
+
   return (
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
           tabBarShowLabel: false, // Aqui pueden cambiar si hay iconos o no
+          headerStyle: {
+            backgroundColor: "#f4511e",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
         }}
       >
         <Tab.Screen
           options={{
+            title: "Primero",
             tabBarIcon: ({ focused }) => {
               return (
                 <AntDesign name="home" size={32} color={focused && "red"} />
@@ -41,6 +52,7 @@ export default function App() {
 
         <Tab.Screen
           options={{
+            title: "Segundo",
             tabBarIcon: ({ focused }) => (
               <Ionicons name="menu" size={32} color={focused && "red"} />
             ),
@@ -51,6 +63,7 @@ export default function App() {
 
         <Tab.Screen
           options={{
+            title: "Tercero",
             tabBarIcon: ({ focused }) => (
               <FeatherIcons name="map-pin" size={32} color={focused && "red"} />
             ),
@@ -61,6 +74,7 @@ export default function App() {
 
         <Tab.Screen
           options={{
+            title: "Cuarto",
             tabBarIcon: ({ focused }) => (
               <Ionicons
                 name="settings-outline"
@@ -68,6 +82,11 @@ export default function App() {
                 color={focused && "red"}
               />
             ),
+            // headerTitle: (props) => (
+            //   <View {...props}>
+            //     <Text>Titulo Personal</Text>
+            //   </View>
+            // ),
           }}
           name="FourthScreen"
           component={FourthScreen}
