@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import FirstScreen from "./screens/First";
 import SecondScreen from "./screens/Second";
 import ThirdScreen from "./screens/Third";
+import FourthScreen from "./screens/Fourth";
 
 const Tab = createBottomTabNavigator();
 
@@ -15,6 +16,7 @@ export default function App() {
         <Tab.Screen name="FirstScreen" component={FirstScreen} />
         <Tab.Screen name="SecondScreen" component={SecondScreen} />
         <Tab.Screen name="ThirdScreen" component={ThirdScreen} />
+        <Tab.Screen name="FourthScreen" component={FourthScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
