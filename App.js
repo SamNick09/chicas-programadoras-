@@ -14,6 +14,12 @@ import FourthScreen from "./screens/Fourth";
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+  // focused && "red"
+
+  // if (focused) {
+  //   return true;
+  // }
+
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -23,7 +29,11 @@ export default function App() {
       >
         <Tab.Screen
           options={{
-            tabBarIcon: ({ focused }) => <AntDesign name="home" size={32} />,
+            tabBarIcon: ({ focused }) => {
+              return (
+                <AntDesign name="home" size={32} color={focused && "red"} />
+              );
+            },
           }}
           name="FirstScreen"
           component={FirstScreen}
@@ -31,7 +41,9 @@ export default function App() {
 
         <Tab.Screen
           options={{
-            tabBarIcon: ({ focused }) => <Ionicons name="menu" size={32} />,
+            tabBarIcon: ({ focused }) => (
+              <Ionicons name="menu" size={32} color={focused && "red"} />
+            ),
           }}
           name="SecondScreen"
           component={SecondScreen}
@@ -40,7 +52,7 @@ export default function App() {
         <Tab.Screen
           options={{
             tabBarIcon: ({ focused }) => (
-              <FeatherIcons name="map-pin" size={32} />
+              <FeatherIcons name="map-pin" size={32} color={focused && "red"} />
             ),
           }}
           name="ThirdScreen"
@@ -50,7 +62,11 @@ export default function App() {
         <Tab.Screen
           options={{
             tabBarIcon: ({ focused }) => (
-              <Ionicons name="settings-outline" size={32} />
+              <Ionicons
+                name="settings-outline"
+                size={32}
+                color={focused && "red"}
+              />
             ),
           }}
           name="FourthScreen"
