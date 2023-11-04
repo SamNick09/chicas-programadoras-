@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Dimensions } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import AutoIcon from "../../svgIcons/AutoIcon";
 
 const FirstScreen = () => {
   const espacios = useSafeAreaInsets();
@@ -29,7 +30,6 @@ const FirstScreen = () => {
           justifyContent: "center",
           alignItems: "center",
           height: dimensionContenedor,
-          backgroundColor: "gray",
         }}
       >
         <View
@@ -38,8 +38,12 @@ const FirstScreen = () => {
             height: "80%",
             backgroundColor: "#FF8989",
             borderRadius: 24,
+            justifyContent: "center",
+            alignItems: "center",
           }}
-        ></View>
+        >
+          <AutoIcon />
+        </View>
       </View>
     </View>
   );
