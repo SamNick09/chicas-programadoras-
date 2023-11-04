@@ -37,6 +37,7 @@ export default function App() {
           headerTitleStyle: {
             fontWeight: "bold",
           },
+          headerShown: false,
         }}
       >
         <Tab.Screen

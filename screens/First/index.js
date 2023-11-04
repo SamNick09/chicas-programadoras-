@@ -1,9 +1,12 @@
 import React from "react";
 import { View, Text } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const FirstScreen = () => {
+  const espacios = useSafeAreaInsets();
+
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, paddingTop: espacios.top }}>
       <View
         style={{
           justifyContent: "center",
