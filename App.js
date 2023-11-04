@@ -10,6 +10,8 @@ import FirstScreen from "./screens/First";
 import SecondScreen from "./screens/Second";
 import ThirdScreen from "./screens/Third";
 import FourthScreen from "./screens/Fourth";
+import HomeIcon from "./svgIcons/HomeIcon";
+import LupaIcon from "./svgIcons/LupaIcon";
 
 const Tab = createBottomTabNavigator();
 
@@ -41,9 +43,7 @@ export default function App() {
           options={{
             title: "Primero",
             tabBarIcon: ({ focused }) => {
-              return (
-                <AntDesign name="home" size={32} color={focused && "red"} />
-              );
+              return <HomeIcon />;
             },
           }}
           name="FirstScreen"
@@ -53,9 +53,9 @@ export default function App() {
         <Tab.Screen
           options={{
             title: "Segundo",
-            tabBarIcon: ({ focused }) => (
-              <Ionicons name="menu" size={32} color={focused && "red"} />
-            ),
+            tabBarIcon: ({ focused }) => {
+              return <LupaIcon />;
+            },
           }}
           name="SecondScreen"
           component={SecondScreen}
