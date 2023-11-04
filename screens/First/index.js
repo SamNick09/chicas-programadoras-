@@ -3,8 +3,21 @@ import { View, Text } from "react-native";
 
 const FirstScreen = () => {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontWeight: "700", fontSize: 20 }}>Primer Screen</Text>
+    <View style={{ flex: 1 }}>
+      <View
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 7,
+        }}
+      >
+        <Text style={{ fontSize: 30, color: "#FF6666", fontWeight: "600" }}>
+          Hola Maria,
+        </Text>
+        <Text style={{ fontSize: 20, fontWeight: "500" }}>
+          Encuentra y monitorea tus viajes
+        </Text>
+      </View>
     </View>
   );
 };
