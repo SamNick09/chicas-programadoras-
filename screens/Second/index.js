@@ -22,8 +22,7 @@ const SecondScreen = () => {
         <Text style={{ fontSize: 20 }}>Nuevo destino</Text>
       </View>
       <View style={{ padding: 10 }}>
-        <TouchableOpacity
-          onPress={() => console.log("hola")}
+        <View
           style={{
             backgroundColor: "#FF8989",
             height: ALTURA_BOTON,
@@ -34,10 +33,24 @@ const SecondScreen = () => {
             paddingHorizontal: 20,
           }}
         >
-          <FlechaIzquierdaVentura />
+          <TouchableOpacity
+            onPress={() => {
+              console.log("hola");
+            }}
+            style={{ backgroundColor: "red" }}
+          >
+            <FlechaIzquierdaVentura />
+          </TouchableOpacity>
           <Text style={{ fontSize: 20, color: "white" }}>Ventura Mall</Text>
-          <FlechaDerechaVentura />
-        </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              console.log("hola");
+            }}
+            style={{ backgroundColor: "blue" }}
+          >
+            <FlechaDerechaVentura />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
