@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
-import FlechaDerecha from "../../svgIcons/FlechaDerecha";
+import FlechaDerechaVentura from "../../svgIcons/FlechaDerechaVentura";
+import FlechaIzquierdaVentura from "../../svgIcons/FlechaIzquierdaVentura";
 import { ALTURA_BOTON } from "../../config/boton";
-
 const SecondScreen = () => {
   return (
     <View
@@ -29,9 +29,12 @@ const SecondScreen = () => {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: 16,
+            flexDirection: "row",
           }}
         >
+          <FlechaIzquierdaVentura />
           <Text style={{ fontSize: 20, color: "white" }}>Ventura Mall</Text>
+          <FlechaDerechaVentura />
         </View>
       </View>
     </View>
