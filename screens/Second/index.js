@@ -5,6 +5,8 @@ import FlechaIzquierdaVentura from "../../svgIcons/FlechaIzquierdaVentura";
 import { ALTURA_BOTON } from "../../config/boton";
 
 const SecondScreen = () => {
+  const [destino, setDestino] = React.useState("izquierda");
+
   return (
     <View
       style={{
@@ -26,30 +28,52 @@ const SecondScreen = () => {
           style={{
             backgroundColor: "#FF8989",
             height: ALTURA_BOTON,
-            justifyContent: "space-between",
-            alignItems: "center",
             borderRadius: 16,
             flexDirection: "row",
-            paddingHorizontal: 20,
+            marginTop: 40,
           }}
         >
           <TouchableOpacity
             onPress={() => {
-              console.log("hola");
+              setDestino("izquierda");
             }}
-            style={{ backgroundColor: "red" }}
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              flex: 0.3,
+            }}
           >
             <FlechaIzquierdaVentura />
           </TouchableOpacity>
-          <Text style={{ fontSize: 20, color: "white" }}>Ventura Mall</Text>
+
+          <View
+            style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+          >
+            <Text style={{ fontSize: 20, color: "white" }}>Ventura Mall</Text>
+          </View>
+
           <TouchableOpacity
             onPress={() => {
-              console.log("hola");
+              setDestino("derecha");
             }}
-            style={{ backgroundColor: "blue" }}
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              flex: 0.3,
+            }}
           >
             <FlechaDerechaVentura />
           </TouchableOpacity>
+        </View>
+        <View
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: 20,
+          }}
+        >
+          <Text>Direccion:</Text>
+          <Text>{destino}</Text>
         </View>
       </View>
     </View>
